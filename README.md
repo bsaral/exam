@@ -1,6 +1,6 @@
 # Instution - User
 
-<img src = "../public/img/1.png/" />
+<img src = "http://yuml.me/7482595a" />
 
 
 
