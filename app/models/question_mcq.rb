@@ -1,0 +1,2 @@
+class QuestionMCQ < Question
+end
