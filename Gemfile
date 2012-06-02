@@ -20,3 +20,13 @@ end
 
 gem 'jquery-rails'
 gem 'cucumber-rails', group: "test"
+
+group :cucumber do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
+  gem 'cucumber'
+  gem 'rspec-rails', '>= 2.0.0.beta.10'
+  gem 'spork'
+  gem 'launchy'
+end
