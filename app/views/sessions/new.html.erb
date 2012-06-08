@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="span8 offset2">
+      <%= form_tag sessions_path,:class=>"form-horizontal" do %>
+      <legend>Kullanıcı Girişi</legend>
+        <% if flash[:error] %>
+          <div class="alert alert-error">
+            <%= flash[:error] %>
+          </div>
+        <% end %>
+        <div class="control-group">
+          <label class="control-label">Kullanıcı Adınız</label>
+	  <%= text_field_tag :username, params[:username] %>
+        </div>
+        <div class="control-group>">
+          <label class="control-label">Parola</label>
+	  <%= password_field_tag :password %>
+        </div>
+        <%= submit_tag "Giriş Yap",:class =>"btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

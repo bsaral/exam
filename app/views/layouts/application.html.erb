@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
+      <ul class="nav pull-right" >
+        <% if current_user %>
+          <li><%= link_to current_user.username,"" %></li> 
+          <li><%= link_to "Çıkış",logout_url %> </li>
+        <% end %>
+        <li> <% if flash[:error] %>
+          <div class="alert alert-error">
+            <%= flash[:error] %>
+          </div>
+        <% end %>
+        </li>
+      <ul>
+   
 
 <%= yield %>
 

@@ -1,0 +1,53 @@
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          
+          <a class="brand" href="/">Exam</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="/">Home</a></li>
+            </ul>
+            
+          </div><!--/.nav-collapse -->
+          
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="hero-unit" style = "height:100px;width:600px;position:absolute;top:100px;left:50px">
+	<h2>EXAM</h2>
+	<p> deneme amaçlı hazırlanmış basit bir sınav sistemidir </p>
+	<div class="container">
+  <div class="row">
+    <div class="span8 offset2">
+    <div style= "position:absolute;top:0px;left:8in">
+      <%= form_tag sessions_path,:class=>"form-horizontal" do %>
+      <legend>Kullanıcı Girişi</legend>
+        <% if flash[:error] %>
+          <div class="alert alert-error">
+            <%= flash[:error] %>
+          </div>
+        <% end %>
+        <div class="control-group">
+          <label class="control-label">Kullanıcı Adınız</label>
+	  <%= text_field_tag :username, params[:username] %>
+        </div>
+        <div class="control-group>">
+          <label class="control-label">Parola</label>
+	  <%= password_field_tag :password %>
+        </div>
+        <%= submit_tag "Giriş Yap",:class =>"btn btn-primary" %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+  
+
+</div>
+
+
+
