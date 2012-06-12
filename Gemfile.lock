@@ -45,6 +45,8 @@ GEM
       activesupport (>= 3.2.0)
     childprocess (0.3.2)
       ffi (~> 1.0.6)
+    ckeditor (3.4.2.pre)
+      mime-types (>= 1.16)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -166,6 +168,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   cancan
   carrierwave
+  ckeditor (= 3.4.2.pre)
   coffee-rails (~> 3.2.1)
   cucumber-rails
   execjs

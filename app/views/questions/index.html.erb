@@ -1,6 +1,7 @@
-<h1>Listing questions</h1>
+<div class="hero-unit">
+<h3>Listing questions</h3>
 
-<table >
+<table>
   <tr>
     <th>Title</th>
     <th>Question</th>
@@ -11,7 +12,7 @@
   </tr>
 
 <% @questions.each do |question| %>
-  <tr >
+  <tr>
     <td><%= question.title %></td>
     <td><%= question.question %></td>
     <td><%= question.answer %></td>
@@ -25,3 +26,4 @@
 <br />
 
 <%= link_to 'New Question', new_question_path %>
+</div>

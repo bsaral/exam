@@ -25,7 +25,6 @@ class QuestionsController < ApplicationController
   # GET /questions/new.json
   def new
     @question = Question.new
-    
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,7 +35,6 @@ class QuestionsController < ApplicationController
   # GET /questions/1/edit
   def edit
     @question = Question.find(params[:id])
-    
   end
 
   # POST /questions

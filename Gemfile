@@ -5,6 +5,7 @@ gem 'twitter-bootstrap-rails'
 gem 'cancan'
 gem 'rails-i18n'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'ckeditor', '3.4.2.pre'
 gem "carrierwave"
 gem "mini_magick"
 gem "mysql2"

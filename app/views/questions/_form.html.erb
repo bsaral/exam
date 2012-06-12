@@ -1,4 +1,5 @@
-<%= form_for @question do |f| %>
+
+<%= form_for(@question) do |f| %>
   <% if @question.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
@@ -10,19 +11,16 @@
       </ul>
     </div>
   <% end %>
- <div class="hero-unit" >
+ <div class="hero-unit">
   <div class="field">
-    <%= f.label :title,:class => 'yazi'  %><br />
-    <div class="controls">
+    <%= f.label :title %><br />
     <%= f.text_field :title,:class => 'span5' %>
-    </div>
   </div>
   <div class="field">
     <%= f.label :question %><br />
-    <%= f.text_field :question,:class => 'span5'%>
+    <%= f.cktext_area :question,:toolbar => "Full",:class => 'span5',:height=>'300px'  %>
   </div>
-    
-  <div class="field" >
+   <div class="field" >
       <%= f.label :answer %>
       <%= f.select :answer, %w[A B C D ] %>
   </div>
@@ -30,11 +28,11 @@
    <div class="field">
     <%= f.text_field :answer,:class => 'span5' %>
   </div>
-  
-  
   <div class="actions">
     <%= f.submit %>
   </div>
   </div>
+  
+ 
 <% end %>
 
