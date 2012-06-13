@@ -21,12 +21,15 @@
     <%= f.cktext_area :question,:toolbar => "Full",:class => 'span5',:height=>'300px'  %>
   </div>
    <div class="field" >
-      <%= f.label :answer %>
+      <%= f.label :select %>
       <%= f.select :answer, %w[A B C D ] %>
   </div>
    
    <div class="field">
-    <%= f.text_field :answer,:class => 'span5' %>
+   <% 4.times do %>
+   <%= f.label :answer %>
+    <%= f.text_field :answer,:class => 'span5' %><br />
+    <%end%>
   </div>
   <div class="actions">
     <%= f.submit %>
