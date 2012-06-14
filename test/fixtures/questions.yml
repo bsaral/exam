@@ -4,8 +4,10 @@ one:
   title: MyString
   question: MyText
   answer: MyString
+  qtype: MyString
 
 two:
   title: MyString
   question: MyText
   answer: MyString
+  qtype: MyString

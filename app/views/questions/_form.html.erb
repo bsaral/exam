@@ -1,4 +1,3 @@
-
 <%= form_for(@question) do |f| %>
   <% if @question.errors.any? %>
     <div id="error_explanation">
@@ -12,6 +11,12 @@
     </div>
   <% end %>
  <div class="hero-unit">
+ 
+ <div class="field">
+    <%= f.label :qtype %><br />
+    <%= f.text_field :qtype,:class => 'span5' %>
+  </div>
+ 
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title,:class => 'span5' %>
@@ -38,4 +43,3 @@
   
  
 <% end %>
-
