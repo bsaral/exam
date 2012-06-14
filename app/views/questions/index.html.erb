@@ -1,29 +1,40 @@
 <div class="hero-unit">
 <h3>Listing questions</h3>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Question</th>
-    <th>Answer</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<table class="table table-striped display">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th>Type</th>
+      
+
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
 
 <% @questions.each do |question| %>
   <tr>
-    <td><%= question.title %></td>
-    <td><%= question.question %></td>
-    <td><%= question.answer %></td>
-    <td><%= link_to 'Show', question %></td>
-    <td><%= link_to 'Edit', edit_question_path(question) %></td>
-    <td><%= link_to 'Destroy', question, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= question.id %></td>
+    <td><%= link_to question.title, question_path(question)  %></td>
+    <td><%= question.created_at %></td>
+    <td><%= question.updated_at %></td>
+    
+   
+    <td>
+		<%= link_to 'Show', question,:class => 'btn btn-success' %>
+		<%= link_to 'Edit', edit_question_path(question),:class => 'btn btn-warning' %>
+		<%= link_to 'Destroy', question, confirm: 'Are you sure?', method: :delete,:class => 'btn  btn-danger' %>
+	</td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />
 
-<%= link_to 'New Question', new_question_path %>
+<%= link_to 'New Question', new_question_path,:class => 'btn btn-primary' %>
 </div>
