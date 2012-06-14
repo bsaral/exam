@@ -3,6 +3,7 @@ Exam::Application.routes.draw do
 
   get "home/index"
   root :to=>"home#index"
+  match "/questions/new/:type" => "questions#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

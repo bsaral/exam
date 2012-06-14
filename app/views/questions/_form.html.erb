@@ -14,7 +14,10 @@
  
  <div class="field">
     <%= f.label :qtype %><br />
-    <%= f.text_field :qtype,:class => 'span5' %>
+    <% dic= {'a' => 'Physics', 'b' => 'Chemistry', 'c' => 'Biology'} %>
+    <% @type = request.path_parameters[:type] %>
+    <%= f.text_field :qtype ,:class => 'span5',:readonly => true,:value => dic[@type]%>
+   
   </div>
  
   <div class="field">
