@@ -8,16 +8,17 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'ckeditor', '3.4.2.pre'
 gem "carrierwave"
 gem "mini_magick"
-gem "mysql2"
 gem 'sqlite3'
 gem 'execjs'
 gem 'therubyracer'
+gem 'will_paginate'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
+
 
 gem 'jquery-rails'
 gem 'cucumber-rails', group: "test"

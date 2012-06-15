@@ -17,6 +17,11 @@
     <% dic= {'a' => 'Physics', 'b' => 'Chemistry', 'c' => 'Biology'} %>
     <% @type = request.path_parameters[:type] %>
     <%= f.text_field :qtype ,:class => 'span5',:readonly => true,:value => dic[@type]%>
+    <%= @question.qtype = dic[@type] %>
+    
+     
+    
+   
    
   </div>
  
