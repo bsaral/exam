@@ -13,17 +13,17 @@
  <div class="hero-unit">
  
  <div class="field">
+ 
+ 
     <%= f.label :qtype %><br />
-    <% dic= {'a' => 'Physics', 'b' => 'Chemistry', 'c' => 'Biology'} %>
-    <% @type = request.path_parameters[:type] %>
-    <%= f.text_field :qtype ,:class => 'span5',:readonly => true,:value => dic[@type]%>
-    <%= @question.qtype = dic[@type] %>
+    <%= f.text_field :qtype ,:class => 'span5',:readonly => true%>
     
-     
+    
+    
+    
     
    
-   
-  </div>
+   </div>
  
   <div class="field">
     <%= f.label :title %><br />

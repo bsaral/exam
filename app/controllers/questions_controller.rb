@@ -25,6 +25,8 @@ class QuestionsController < ApplicationController
   # GET /questions/new.json
   def new
     @question = Question.new
+    dic= {'a' => 'Physics', 'b' => 'Chemistry', 'c' => 'Biology'}
+    @question.qtype = dic[params[:type]]
 
     respond_to do |format|
       format.html # new.html.erb
