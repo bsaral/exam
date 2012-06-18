@@ -18,12 +18,7 @@
     <%= f.label :qtype %><br />
     <%= f.text_field :qtype ,:class => 'span5',:readonly => true%>
     
-    
-    
-    
-    
-   
-   </div>
+ </div>
  
   <div class="field">
     <%= f.label :title %><br />
@@ -38,12 +33,14 @@
       <%= f.select :answer, %w[A B C D ] %>
   </div>
    
-   <div class="field">
-   <% 4.times do %>
-   <%= f.label :answer %>
-    <%= f.text_field :answer,:class => 'span5' %><br />
-    <%end%>
-  </div>
+   <%= f.fields_for :answers do |builder| %>
+	<div class = "field">
+		<%= builder.label  :content , "Answer" %>
+		<%= builder.text_field :content, :class => 'span5' %>
+	</div>
+   <% end %>
+   
+   
   <div class="actions">
     <%= f.submit %>
   </div>

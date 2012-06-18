@@ -2,23 +2,31 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Type:</b>
+  <b class = "renk">Type:</b>
   <%= @question.qtype %>
 </p>
 
 <p>
-  <b>Title:</b>
+  <b class = "renk">Title:</b>
   <%= @question.title %>
 </p>
 
 <p>
-  <b>Question:</b>
+  <b class = "renk">Question:</b>
   <%= simple_format(@question.question) %>
 </p>
 
-<p>
-  <b>Answer:</b>
-  <%= @question.answer %>
+
+<p> <b class = "renk"> Answers : </b>
+	<% @question.answers.each_with_index do |answer, ind| %><br />
+		<% if @question[:answer] == "ABCD"[ind] %>
+			<span class="badge badge-success"><%= "ABCD"[ind] %></span>
+				<%= answer.content %>
+		<% else %>
+             <span class="badge badge-error"><%= "ABCD"[ind] %></span>
+				<%= answer.content %>
+         <% end %>
+     <% end %>
 </p>
 
 

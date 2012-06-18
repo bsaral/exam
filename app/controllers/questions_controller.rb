@@ -27,6 +27,9 @@ class QuestionsController < ApplicationController
     @question = Question.new
     dic= {'a' => 'Physics', 'b' => 'Chemistry', 'c' => 'Biology'}
     @question.qtype = dic[params[:type]]
+    4.times {@question.answers.build}
+
+    
 
     respond_to do |format|
       format.html # new.html.erb
@@ -43,9 +46,9 @@ class QuestionsController < ApplicationController
   # POST /questions.json
   def create
     @question = Question.new(params[:question])
-
-    respond_to do |format|
-      if @question.save
+	respond_to do |format|
+    
+     if @question.save
         format.html { redirect_to @question, notice: 'Question was successfully created.' }
         format.json { render json: @question, status: :created, location: @question }
       else
@@ -54,6 +57,9 @@ class QuestionsController < ApplicationController
       end
     end
   end
+ 
+ 
+  
 
   # PUT /questions/1
   # PUT /questions/1.json
