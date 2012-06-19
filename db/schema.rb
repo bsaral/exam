@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120617203156) do
+ActiveRecord::Schema.define(:version => 20120619100453) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
@@ -37,6 +37,14 @@ ActiveRecord::Schema.define(:version => 20120617203156) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "fk_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_assetable_type"
   add_index "ckeditor_assets", ["user_id"], :name => "fk_user"
+
+  create_table "examinations", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "question_id"
+    t.string   "response"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "questions", :force => true do |t|
     t.string   "title"
