@@ -8,13 +8,16 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'ckeditor', '3.4.2.pre'
 gem "carrierwave"
 gem "mini_magick"
-gem 'sqlite3'
 gem 'execjs'
 gem 'therubyracer'
 gem 'will_paginate'
 
 group :production do
   gem 'pg'
+end
+
+group :development do
+  gem 'sqlite3'
 end
 
 group :assets do
