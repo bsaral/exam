@@ -10,6 +10,14 @@
 
 <img src = "http://yuml.me/7482595a"/>
 
+## YAPILMASI GEREKENLER 
+
+    $ git clone https://github.com/bsaral/exam.git
+    $ bundle
+    $ rake db:migrate
+    $ rake db:seed
+    $ rails s 
+
 
 
 
