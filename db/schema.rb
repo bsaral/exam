@@ -46,11 +46,26 @@ ActiveRecord::Schema.define(:version => 20120619225045) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "institutions", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "questions", :force => true do |t|
     t.string   "title"
     t.text     "question"
     t.string   "answer"
     t.string   "qtype"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "surname"
+    t.string   "email"
+    t.string   "password"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
