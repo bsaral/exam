@@ -1,8 +1,15 @@
-<div class="hero-unit" style="height:100px;width:450px;position:absolute;top:150px;left:350px;">
-		
-  
-   <h1><%= @questions.title %></h1>
-    
-
-
+<div class="hero-unit" style="height:250px;width:600px;position:absolute;top:100px;left:270px;">
+	<% @no=1 %>
+	<h3 style="color:red"> Soru No : <%= @no %> </h3>
+	<% quest=@quests[@no] %>
+	<h3> Title : <%=quest.title %></h3>
+	<p> Question : <%= simple_format(quest.question) %></p>
+	<p> Answer : 
+			<li><%= link_to "AAAA", "/q/#{@no+1}/a" %></li>
+			<li><%= link_to "BBBB", "/q/#{@no+1}/b" %></li>
+			<li><%= link_to "CCCC", "/q/#{@no+1}/c" %></li>
+			<li><%= link_to "DDDD", "/q/#{@no+1}/d" %></li>
+	</p>
+	
+	
 </div>

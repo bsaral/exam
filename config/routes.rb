@@ -8,6 +8,7 @@ Exam::Application.routes.draw do
   match "/questions/new/:type" => "questions#new"
   match "/start"  => "examinations#start",  :as => "start"
   match "/test"  => "examinations#test",  :as => "test"
+  match "/q/:no(/:opt)" => "examinations#test"
 
   
 end
