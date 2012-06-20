@@ -41,6 +41,16 @@
 		</p>
 		
 FIXME Image upload
+
+## YAPILMASI GEREKENLER
+
+	$ git clone https://github.com/bsaral/exam.git
+	$ git checkout -b author
+	$ git pull origin author
+	$ bundle
+	$ rake db:migrate
+	$ rake db:seed
+	$ rails s 
 		
 		
 	
