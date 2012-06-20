@@ -10,6 +10,7 @@ class ExaminationsController < QuestionsController
 		@quests.each do |q|
 			Examination.create( :question_id => q.id)
 		end
+		@no = params[:no].to_i
 		
 		
 		respond_to do |format|
