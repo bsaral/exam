@@ -16,13 +16,16 @@
   </thead>
   <tbody>
 
+<% dic= {'a' => 'Physics', 'b' => 'Chemistry', 'c' => 'Biology'} %>
 <% @questions.each do |question| %>
   <tr>
     <td><%= question.id %></td>
     <td><%= link_to question.title, question_path(question)  %></td>
     <td><%= question.created_at %></td>
     <td><%= question.updated_at %></td>
-    <td><%= question.qtype %></td>
+    <% type = question.qtype %>
+    <td><%= dic[type] %></td>
+    
     
    
     <td>

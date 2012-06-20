@@ -25,8 +25,7 @@ class QuestionsController < ApplicationController
   # GET /questions/new.json
   def new
     @question = Question.new
-    dic= {'a' => 'Physics', 'b' => 'Chemistry', 'c' => 'Biology'}
-    @question.qtype = dic[params[:type]]
+    @question.qtype = params[:type]
     4.times {@question.answers.build}
 
     

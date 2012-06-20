@@ -2,10 +2,9 @@ class ExaminationsController < QuestionsController
 
 	def test
 	
-		dic= {'a' => 'Physics', 'b' => 'Chemistry', 'c' => 'Biology'}
-		@qa = Question.where(:qtype => dic['a']).shuffle[1..4]
-		@qb = Question.where(:qtype => dic['b']).shuffle[1..3]
-		@qc = Question.where(:qtype => dic['c']).shuffle[1..2]
+		@qa = Question.where(:qtype => 'a').shuffle[1..4]
+		@qb = Question.where(:qtype => 'b').shuffle[1..3]
+		@qc = Question.where(:qtype => 'c').shuffle[1..2]
 		@quests = @qa + @qb + @qc
 		
 		@quests.each do |q|

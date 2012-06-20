@@ -2,9 +2,12 @@
 	<% @no=1 %>
 	<h3 style="color:red"> Soru No : <%= @no %> </h3>
 	<% quest=@quests[@no] %>
+	<% dic= {'a' => 'Physics', 'b' => 'Chemistry', 'c' => 'Biology'} %>
+	<% type=quest.qtype %>
+	<h3 style= "color:green"> Type : <%= dic[type] %> </h3>
 	<h3> Title : <%=quest.title %></h3>
-	<p> Question : <%= simple_format(quest.question) %></p>
-	<p> Answer : 
+	<p style= "color:blue"> Question : <%= simple_format(quest.question) %></p>
+	<p style = "color:purple"> Answer : 
 			<li><%= link_to "AAAA", "/q/#{@no+1}/a" %></li>
 			<li><%= link_to "BBBB", "/q/#{@no+1}/b" %></li>
 			<li><%= link_to "CCCC", "/q/#{@no+1}/c" %></li>
