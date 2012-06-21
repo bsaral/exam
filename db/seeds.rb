@@ -20,3 +20,8 @@
 		
 		q.save
 end
+
+
+User.create(:username => "student", :password => "1234", :password_confirmation => "1234", :role => "student")
+User.create(:username => "author", :password => "1234", :password_confirmation => "1234", :role => "author")
+User.create(:username => "bsaral", :password => "1234", :password_confirmation => "1234", :role => "student")

@@ -17,6 +17,18 @@
             <ul class="nav">
               <li class="active"><a href="/">Home</a></li>
             </ul>
+            <ul class="nav pull-right" >
+				<% if current_user %>
+				  <li><%= link_to current_user.username,"" %></li> 
+				  <li><%= link_to "Çıkış",logout_url %> </li>
+				<% end %>
+				<li> <% if flash[:error] %>
+				  <div class="alert alert-error">
+					<%= flash[:error] %>
+				  </div>
+				<% end %>
+				</li>
+			  <ul>
             </div>
             
           </div><!--/.nav-collapse -->
