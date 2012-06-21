@@ -7,10 +7,10 @@ class ExaminationsController < QuestionsController
 		@qc = Question.where(:qtype => 'c').shuffle[1..2]
 		@quests = @qa + @qb + @qc
 		
-		@no = params[:no].to_i
 		@opt = params[:opt].to_s
+		@no = params[:no].to_i
 		@find = Examination.find_by_id(@no)
-		@find_q = Question.find_by_id(@no)
+		
 		if @find == nil 
 			Examination.create(:question_id => @no , :response => @opt)
 		end
@@ -37,7 +37,7 @@ class ExaminationsController < QuestionsController
 	def rapor
 	
 		@examinations = Examination.all
-		@questions = Question.all
+		test()
 		
 	end
 			
