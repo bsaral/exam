@@ -1,9 +1,12 @@
 <div class="hero-unit" style="height:290px;width:450px;position:absolute;top:150px;left:350px;">
-	
+	<h3 style = "position:absolute;top:20px;left:200px"> RAPOR <h3>
 	<% @examinations.each do |i| %>
-		<h5 style= "color:red"><%= i.question_id %>-) <h5><br />
-		<%= params[:opt] %>
+		<h5 style= "color:red"><%= i.question_id %>   -)   <%= i.response  %> <h5><br />		
 	<% end %>
+	
+	
+	
+	
 
 
 

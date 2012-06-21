@@ -10,21 +10,16 @@ class ExaminationsController < QuestionsController
 		@no = params[:no].to_i
 		@opt = params[:opt].to_s
 		@find = Examination.find_by_id(@no)
+		@find_q = Question.find_by_id(@no)
 		if @find == nil 
-			Examination.create(:question_id => @no , :response => params[:opt])
+			Examination.create(:question_id => @no , :response => @opt)
 		end
-		
-		
 		
 		
 		
 		if @no == 10 
 			redirect_to ("/finish")
 		end
-		
-		
-		
-		
 		
 		
 	end
@@ -42,6 +37,8 @@ class ExaminationsController < QuestionsController
 	def rapor
 	
 		@examinations = Examination.all
+		@questions = Question.all
+		
 	end
 			
 			
