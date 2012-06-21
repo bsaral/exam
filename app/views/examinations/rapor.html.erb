@@ -1,0 +1,10 @@
+<div class="hero-unit" style="height:290px;width:450px;position:absolute;top:150px;left:350px;">
+	
+	<% @examinations.each do |i| %>
+		<h5 style= "color:red"><%= i.question_id %>-) <h5><br />
+		<%= params[:opt] %>
+	<% end %>
+
+
+
+</div>

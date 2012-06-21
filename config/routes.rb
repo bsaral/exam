@@ -10,6 +10,7 @@ Exam::Application.routes.draw do
   match "/test"  => "examinations#test",  :as => "test"
   match "/q/:no(/:opt)" => "examinations#test"
   match "/finish" => "examinations#finish", :as => "finish"
+  match "/rapor" => "examinations#rapor", :as => "rapor"
 
   
 end

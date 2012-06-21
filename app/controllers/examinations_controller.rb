@@ -7,14 +7,22 @@ class ExaminationsController < QuestionsController
 		@qc = Question.where(:qtype => 'c').shuffle[1..2]
 		@quests = @qa + @qb + @qc
 		
-		@quests.each do |q|
-			Examination.create( :question_id => q.id)
-		end
 		@no = params[:no].to_i
+		@opt = params[:opt].to_s
+		@find = Examination.find_by_id(@no)
+		if @find == nil 
+			Examination.create(:question_id => @no , :response => params[:opt])
+		end
+		
+		
+		
+		
 		
 		if @no == 10 
 			redirect_to ("/finish")
 		end
+		
+		
 		
 		
 		
@@ -27,11 +35,13 @@ class ExaminationsController < QuestionsController
 		test()
 	end
 	
-	def finish
-		
-		
-		
+	def finish	
 			
+	end
+	
+	def rapor
+	
+		@examinations = Examination.all
 	end
 			
 			
