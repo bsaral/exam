@@ -1,9 +1,9 @@
 <div class="hero-unit" style="height:100px;width:450px;position:absolute;top:150px;left:350px;">
 
-	<h1> SINAVINIZ BİTTİ <h1>
-	<%= link_to '/rapor',:class => 'btn btn-large btn-success',:style => "position:absolute;top:150px;left:190px;" do %>
-			Sonucumu Göster
-	<% end %> 
+	<h1> SINAVINIZ BİTTİ </h1>
+	<%= button_to 'Sonucumu Göster', { :action => "rapor", :format => "pdf" }, :class => 'btn btn-large btn-success',:style => "position:absolute;top:150px;left:190px;" %>	
+	
 
-
+<p style="font-size:11px;position:absolute;top:200px;"> NOT = pdf ancak yeni bir sekme de alınır lütfen butona tıklayarak yeni bir sekme açınız </p>
 </div>
+
