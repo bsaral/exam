@@ -32,5 +32,5 @@
 
 <%= link_to 'Edit', edit_question_path(@question),:class => 'btn btn-success' %> |
 <%= link_to 'Back', questions_path,:class => 'btn btn-warning' %>
-<p><%= link_to "Printable Invoice (PDF)", questions_path(@question, :format => 'pdf') %></p>
+<p><%= link_to "Printable Invoice (PDF)", :action => "show", :id => @question,:format => "pdf" %></p>
 </div>
