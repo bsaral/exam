@@ -11,6 +11,7 @@ gem "mini_magick"
 gem 'execjs'
 gem 'therubyracer'
 gem 'will_paginate'
+gem "prawnto_2", :require => "prawnto"
 
 group :production do
   gem 'pg'

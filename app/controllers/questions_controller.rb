@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+
   # GET /questions
   # GET /questions.json
   def index
@@ -18,6 +19,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @question }
+      format.pdf { render :layout => false }
     end
   end
 
