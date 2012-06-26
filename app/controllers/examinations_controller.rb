@@ -39,6 +39,12 @@ class ExaminationsController < QuestionsController
 		@examinations = Examination.all
 		test()
 		
+		respond_to do |format|
+		  format.html # show.html.erb
+		  format.json { render json: @examinations }
+		  format.pdf { render :layout => false }
+		end
+		
 	end
 			
 			

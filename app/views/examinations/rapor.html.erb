@@ -14,5 +14,6 @@
 	<% @examinations.each do |i| %>
 		<h5 style= "color:red"><%= i.question_id %>   -)   <%=  i.response.upcase  %>  <h5><br />
 	<% end %>
+	<p><%= link_to "Printable Invoice (PDF)", :action => "rapor",:format => "pdf" %></p>
 	
 </div>
