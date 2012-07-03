@@ -5,8 +5,8 @@
 	$ git branch
 		*master
 		
-	$ git checkout -b student
-	$ git pull origin student
+	$ git checkout -b pdf
+	$ git pull origin pdf
 	$ bundle
 	$ rake db:migrate
 	$ rake db:seed
