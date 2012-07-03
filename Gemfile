@@ -12,6 +12,7 @@ gem 'execjs'
 gem 'therubyracer'
 gem 'will_paginate'
 gem "prawnto_2", :require => "prawnto"
+gem 'slim-rails'
 
 group :production do
   gem 'pg'
