@@ -16,11 +16,10 @@ gem 'slim-rails'
 
 group :production do
   gem 'pg'
-  gem 'thin'
 end
 
 group :development, :test do
-  gem 'pg'
+  gem 'sqlite3'
 end
 
 group :assets do
