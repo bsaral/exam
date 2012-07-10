@@ -10,6 +10,7 @@ Exam::Application.routes.draw do
 
   get "home/index"
   match "home" => "home#index"
+  match "lang/:locale" => "home#lang" 
   match "/author" => "home#author",:as => "author"
   root :to=>"home#index"
   match "/questions" => "questions#index"

@@ -3,3 +3,6 @@
 
 en:
   hello: "Hello world"
+  welcome:
+    title: "Welcome"
+    paragraph: "Welcome to my exam system"
