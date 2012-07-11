@@ -1,6 +1,7 @@
 <div class="hero-unit" style = "height:100px;width:450px;position:absolute;top:100px;left:50px">
-	<h2>EXAM</h2>
-	<p> deneme amaçlı hazırlanmış basit bir sınav sistemidir </p>
+	<h2 align= "center" style= "color:green"><%= t 'basic' %></h2></br>
+	<p align= "center"><%= t 'test' %> </p>
+	
 </div>
 
 
@@ -8,21 +9,21 @@
 
 	<div class="span6 offset2">
       <%= form_tag sessions_path,:class=>"form-horizontal" do %>
-      <legend>Kullanıcı Girişi</legend>
+      <legend><%= t 'login' %></legend>
         <% if flash[:error] %>
           <div class="alert alert-error">
             <%= flash[:error] %>
           </div>
         <% end %>
         <div class="control-group">
-          <label class="control-label">Kullanıcı Adınız</label>
+          <label class="control-label"><%= t 'user_name' %></label>
 	  <%= text_field_tag :username, params[:username] %>
         </div>
         <div class="control-group>">
-          <label class="control-label">Parola</label>
+          <label class="control-label"><%= t 'password' %></label>
 	  <%= password_field_tag :password %>
         </div>
-        <%= submit_tag "Giriş Yap",:class =>"btn btn-primary" %>
+        <%= submit_tag t 'enter',:class =>"btn btn-primary" %>
       <% end %>
     </div>
   </div>

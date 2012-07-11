@@ -1,0 +1,7 @@
+tr:
+  basic: "Online Sınav Sistemi"
+  test: "Deneme amaçlı hazırlanmış basit bir sınav sistemidir"
+  login: "Kullanıcı Girişi"
+  user_name: "Kullanıcı Adınız"
+  password: "Parola"
+  enter: "Giriş Yap"

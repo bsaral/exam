@@ -35,6 +35,8 @@ module Exam
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.i18n.default_locale = :en
+    I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -46,6 +48,7 @@ module Exam
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types
     # config.active_record.schema_format = :sql
+    config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
     # Enforce whitelist mode for mass assignment.
     # This will create an empty whitelist of attributes available for mass-assignment for all models
@@ -55,8 +58,6 @@ module Exam
 
     # Enable the asset pipeline
     config.assets.enabled = true
-
-    # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.paths << File.join(Rails.root, 'app', 'assets', 'fonts')
   end
 end

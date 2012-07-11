@@ -2,4 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  basic: "Online Examination System"
+  test: "A simple test system was prepared for trial"
+  user: "Login"
+  user_name: "User Name"
+  password: "Password"
+  enter: "Login"
