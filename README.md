@@ -2,9 +2,6 @@
 	
 	
 	$ git clone https://github.com/bsaral/exam.git
-	$ git branch
-		*master
-		
 	$ git checkout -b lang
 	$ git pull origin lang
 	$ bundle
