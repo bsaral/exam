@@ -12,11 +12,15 @@
 
 ## YAPILMASI GEREKENLER 
 
+```bash
+
     $ git clone https://github.com/bsaral/exam.git
     $ bundle
     $ rake db:migrate
     $ rake db:seed
-    $ rails s 
+    $ rails s
+    
+```
 
 
 
