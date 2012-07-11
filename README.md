@@ -1,4 +1,6 @@
 # YAPILMASI GEREKENLER
+
+```bash
 	
 	
 	$ git clone https://github.com/bsaral/exam.git
@@ -9,8 +11,12 @@
 	$ rake db:seed
 	$ rails s 
 	
+```
+	
 	
 # YAPILANLAR
+
+```ruby
 
 	1- Gemfile
 	
@@ -95,6 +101,8 @@
 		<p align= "center"><%= t 'test' %> </p>
 		
 		.....
+		
+```
 		
 		
 		
