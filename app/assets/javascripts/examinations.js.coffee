@@ -7,4 +7,4 @@ jQuery ->
 	 $('#clock').countdown
 		 format: 'MS'
 		 until: austDay  #<%= @time_finish %>
-		 expiryUrl: location.protocol + '//' + location.host + '/q/finish/'
+		 expiryUrl: location.protocol + '//' + location.host + '/finish_ex/'

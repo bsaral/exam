@@ -18,8 +18,8 @@ Exam::Application.routes.draw do
   match "/start"  => "examinations#start",  :as => "start"
   match "/test"  => "examinations#test",  :as => "test"
   match "/q/:no(/:opt)" => "examinations#test"
-  post "/q/finish" => "exam#finish", :as => "finish"
-  get  "/q/finish" => "exam#finish_expire"
+  match "/finish" => "examinations#finish", :as => "finish"
+  match "/finish_ex" => "examinations#finish_ex", :as => "finish_ex"
   match "/rapor" => "examinations#rapor", :as => "rapor"
 
   
