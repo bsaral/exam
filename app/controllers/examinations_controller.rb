@@ -21,6 +21,11 @@ class ExaminationsController < QuestionsController
 			redirect_to ("/finish")
 		end
 		
+		@time_start   = Time.now
+		@time_finish = @time_start + 5.minutes
+		
+		
+		
 		
 	end
 	
@@ -28,10 +33,21 @@ class ExaminationsController < QuestionsController
 	def start
 	
 		test()
+		
 	end
 	
 	def finish	
+		e = ExamInfo.find_by_user_id(session[:user_id])
+		e.time_finish_student = Time.now
+		e.save
 			
+	end
+	
+	
+	def finish_expire
+		flash[:error] = "Verilen surede sinavi tamamlayamadiniz"
+
+		render 'finish'
 	end
 	
 	def rapor
