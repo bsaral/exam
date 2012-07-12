@@ -1,0 +1,41 @@
+<script type="text/javascript">
+	var austDay = new Date( <%= @time_finish.to_i * 1000 %> );
+
+	function otherFun(response) {
+		    $('input[id=response_id]').val(response);
+		    
+		    $('#target').submit();
+	}
+</script>
+
+<div class="hero-unit" style="height:250px;width:600px;position:absolute;top:100px;left:270px;">
+	<h3 style="color:red"> Soru No : <%= @no %> </h3>
+	<% quest=@quests[@no] %>
+	<% dic= {'a' => 'Physics', 'b' => 'Chemistry', 'c' => 'Biology'} %>
+	<% type=quest.qtype %>
+	<h3 style= "color:green"> Type : <%= dic[type] %> </h3>
+	<h3> Title : <%=quest.title %></h3>
+	<p style= "color:blue"> Question : <%= simple_format(quest.question) %></p>
+	<p style = "color:purple"> Answer : 
+			<li><%= link_to "AAAA", "/q/#{@no+1}/a" %></li>
+			<li><%= link_to "BBBB", "/q/#{@no+1}/b" %></li>
+			<li><%= link_to "CCCC", "/q/#{@no+1}/c" %></li>
+			<li><%= link_to "DDDD", "/q/#{@no+1}/d" %></li>
+
+	</p>
+	<p style="color:pink"> Önceki Soruya Verilen cevap şıkkı : <%= params[:opt] %> </p>
+
+
+</div>
+
+<div style="position:absolute;top:100px;left:750px;">
+    <div id="clock" style="width: 240px; height: 45px;"></div>
+</div>
+
+
+
+
+ 
+	
+
+
